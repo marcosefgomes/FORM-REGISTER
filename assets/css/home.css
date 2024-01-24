@@ -1,0 +1,179 @@
+body {
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background: var(--bgcolor);
+}
+
+body,
+.container,
+.form,
+.form-image,
+.form-header,
+.input-group,
+.input-box,
+.login-button,
+.gender-group,
+.gender-input {
+  display: flex;
+}
+
+.form,
+.form-image {
+  width: 50%;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 80%;
+  height: 80vh;
+  box-shadow: 5px 5px 10px var(--shadow);
+}
+
+.form {
+  background-color: var(--white);
+  padding: 3rem;
+}
+
+.form-image {
+  background-color: var(--bgimg);
+  padding: 1rem;
+}
+
+.form-image img {
+  width: 30rem;
+}
+
+.form-header,
+.gender-group,
+.input-group {
+  justify-content: space-between;
+}
+
+.form-header {
+  margin-bottom: 2rem;
+}
+
+.gender-input,
+.login-button {
+  align-items: center;
+}
+
+.login-button button {
+  padding: 0.4rem 1rem;
+}
+
+.form-header h1::after {
+  content: "";
+  display: block;
+  width: 5rem;
+  height: 0.3rem;
+  background-color: var(--primary);
+  margin: 0 auto;
+  position: absolute;
+  border-radius: 10px;
+}
+
+.input-group {
+  flex-wrap: wrap;
+  padding: 1rem 0;
+}
+
+.input-box {
+  flex-direction: column;
+  margin-bottom: 1.1rem;
+}
+
+.input-box input {
+  margin: 0.6rem 0;
+  padding: 0.8rem 1.2rem;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 1px 1px 6px var(--shadow-input);
+}
+
+.input-box input:hover {
+  background-color: var(--input-hover);
+}
+
+.input-box input:focus-visible {
+  outline: 1px solid var(--primary);
+}
+
+.input-box label,
+.gender-title h6 {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.input-box input::placeholder {
+  color: var(--placeholder);
+}
+
+.gender-group {
+  margin-top: 0.62rem;
+  padding: 0 0.5rem;
+}
+
+.gender-input input {
+  margin-right: 0.35rem;
+}
+
+.gender-input label {
+  font-size: 0.81rem;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.continue-button button {
+  width: 100%;
+  margin-top: 2.5rem;
+  padding: 0.62rem;
+}
+
+.continue-button button a {
+  font-size: 0.93rem;
+}
+
+@media screen and (max-width: 1330px) {
+  .form-image {
+    display: none;
+  }
+
+  .container {
+    width: 50%;
+  }
+
+  .form {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1064px) {
+  .container {
+    width: 90%;
+    height: auto;
+  }
+  .input-group {
+    flex-direction: column;
+    overflow-y: scroll;
+    flex-wrap: nowrap;
+    max-height: 10rem;
+    padding-right: 5rem;
+  }
+
+  .gender-group {
+    flex-direction: column;
+  }
+
+  .gender-inputs {
+    margin-top: 3rem;
+  }
+
+  .gender-input {
+    margin-top: 0.5rem;
+  }
+}
